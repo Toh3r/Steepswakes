@@ -1,0 +1,40 @@
+<!-- Footer -->
+<div class="footer" data-aos="zoom-in-down">
+    <ul class="footer-list">
+        <li>
+            Icons from
+            <a class="green-link" href="https://fontawesome.com/">Font Awesome</a>
+        </li>
+    </ul>
+    <ul class="footer-list">
+        <h3>Links</h3>
+        <li>
+            <h3><a class="green-link" href="#">Github Repo</a></h3>
+        </li>
+    </ul>
+</div>
+<!--End Footer -->
+
+<!-- Nav script -->
+<script>
+    function openMenu() {
+        var x = document.getElementById("top-right-nav");
+        if (x.className === "right-nav") {
+            x.className += " responsive";
+        } else {
+            x.className = "right-nav";
+        }
+    }
+</script>
+
+<!-- Animation Library -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+    AOS.init({
+        duration: 1500, // values from 0 to 3000, with step 50ms
+    });
+</script>
+</body>
+
+</html>

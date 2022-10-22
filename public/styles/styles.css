@@ -11,7 +11,7 @@ body {
 /* -------------------------------------- */
 /* Navbar                                 */
 /* -------------------------------------- */
-.topnav {
+.top-nav {
   background-color: rgb(0, 0, 0);
   width: 100%;
   display: flex;
@@ -21,45 +21,45 @@ body {
   animation: fadein 3s;
 }
 
-.topNavItem {
+.top-nav-item {
   color: whitesmoke;
   text-align: center;
   padding: 15px 15px;
   text-decoration: none;
 }
 
-.topNavItem:hover {
+.top-nav-item:hover {
   color: greenyellow;
   text-decoration: underline;
 }
 
-.rightNav .icon {
+.right-nav .icon {
   display: none;
 }
 
 @media screen and (max-width: 600px) {
-  .rightNav a {display: none;}
-  .rightNav a.icon {
+  .right-nav a {display: none;}
+  .right-nav a.icon {
     float: right;
     display: block;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .rightNav.responsive {position: relative;}
-  .rightNav.responsive .icon {
+  .right-nav.responsive {position: relative;}
+  .right-nav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .rightNav.responsive a {
+  .right-nav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
 }
 
-.leftNav {
+.left-nav {
   margin-top: 10px;
 }
 
