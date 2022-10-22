@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steepswakes</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet" />
+    <!-- Add favicon  -->
+    <link rel="icon" href="/images/favicon.ico?" type="image/x-icon" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+
+
+<body>
+    <div id="mainTopnav" class="topnav">
+        <div class="leftNav">
+            <a href="/" class="topNavItem">
+                Steepswakes
+                <i class="fas fa-broom"></i>
+            </a>
+        </div>
+    
+        <ul id="topRightNav" class="rightNav ">
+            <a class="topNavItem" href="#">Pick Teams</a>
+            <a class="topNavItem" href="#">Competition</a>
+            <a class="icon" onclick="openMenu()">
+                <i class="fas fa-meteor" style="padding-right: 20px;"></i>
+            </a>
+        </ul>
+    </div>
+
+    <div id="landing-container" data-aos="fade-up">
+        <div class="landing-section">
+            <div class="landing-section-left colour2-section" data-aos="zoom-in-up">
+                <div class="inner-section">
+                    <h3>Enter Player Details</h3>
+                    <label for="userNameIn">Enter Name:</label>
+                    <input class="userInput" type="text" id="nameIn" name="userNameIn"><br><br>
+                    <label for="userImgIn">Enter Image:</label>
+                    <input class="userInput" type="text" id="userImgIn" name="userImgIn"><br><br>
+                </div>
+            </div>
+            <div class="landing-section-right colour1-section" data-aos="zoom-in-up">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+    function openMenu() {
+        var x = document.getElementById("topRightNav");
+        if (x.className === "rightNav") {
+            x.className += " responsive";
+        } else {
+            x.className = "rightNav";
+        }
+    }
+</script>
+
+    <!-- AOS library fro animations (Yeah I'm having a lazy day
+    -> TODO: replace at some point) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        AOS.init({
+            duration: 1500, // values from 0 to 3000, with step 50ms
+        });
+    </script>
+</body>
+
+</html>

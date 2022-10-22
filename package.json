@@ -1,0 +1,16 @@
+{
+  "name": "steepswakes",
+  "version": "0.0.1",
+  "description": "Sweeptakes Football App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js -e js,ejs"
+  },
+  "author": "Toh3r",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
