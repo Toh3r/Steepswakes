@@ -1,0 +1,70 @@
+<%- include('partials/header') %>
+
+    <!-- Content -->
+    <div class="outer-container" data-aos="fade-up">
+        <div class="inner-container">
+
+            <!-- Add Players -->
+            <div class="inner-container-lr inner-container-left" data-aos="fade-down-right">
+                <div class="inner-container-content">
+                    <h3 class="header-border">Enter Player Details</h3>
+
+                    <form action="/players" method="POST">
+                        <label for="userNameIn">Enter Name:</label>
+                        <input class="user-details-input" type="text" id="userNameIn" name="name" /><br /><br />
+                        <button class="submit-button" type="submit">Enter Name</button><br /><br />
+                    </form>
+
+                </div>
+            </div>
+            <!-- End Add Players -->
+
+            <!-- Display Players -->
+            <div class="inner-container-lr inner-container-right" data-aos="fade-up-left">
+                <div class="inner-container-content">
+                    <h3 class="header-border">Player List</h3>
+                    <div class="player-list">
+                        <% items.forEach(function(player) { %>
+                            <p><%= player.name %> | <%= player.odds %></p>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+            <!-- End Display Players -->
+
+            <!-- Pick Teams -->
+            <div class="inner-container-lr inner-container-left" data-aos="fade-down-right">
+                <div class="inner-container-content">
+                    <h3 class="header-border">Pick Teams</h3>
+                    <!-- Randomise Form -->
+                    <form action="/players" method="PUT">
+                        <button class="submit-button" type="submit">Randomise Players</button><br /><br />
+                    </form>
+                    
+                    <!-- Pick Teams Form -->
+                    <form action="/players/pickteams" method="POST">
+                        <button class="submit-button" type="submit">Pick Teams</button><br /><br />
+                    </form>
+
+                </div>
+            </div>
+            <!-- End Pick Teams -->
+
+             <!-- Display Picked Teams -->
+             <div class="inner-container-lr inner-container-right" data-aos="fade-up-left">
+                <div class="inner-container-content">
+                    <h3 class="header-border">Selections</h3>
+                    <div class="player-list">
+                        <% items.forEach(function(player) { %>
+                            <p><%= player.name %></p>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+            <!-- End Display Picked Teams -->
+
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <%- include('partials/footer') %>
